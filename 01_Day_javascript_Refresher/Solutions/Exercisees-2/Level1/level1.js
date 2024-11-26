@@ -16,3 +16,12 @@ if (age>=30) {
 // Enter your age: 30
 // You are 5 years older than me.
 
+let myAge = 30
+let yourAge = prompt('Enter your age:')
+let difference = myAge - yourAge
+if (difference>0) {
+  console.log('You are ' + difference +'years older than me.')
+}else{
+  console.log('You are ' + Math.abs(difference) +'years younger than me.')
+}
+
