@@ -73,6 +73,27 @@
 //     What is the day today? FrIDAy
 //     Friday is a working day.
 
-// ?????-?????-  
-// ?????-?????- 
-// ?????-?????-   
+const readline = require('readline');
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.question('What is the day  today?  ', (Day) => {
+  
+  const working_day = [,"Monday","Tuesday","Wednesday","Thursday","Friday"];
+  const Weekend = ["Sunday","Saturday"]
+switch (true) {
+
+  case Weekend.includes(Day):
+    console.log(` ${Day} is Weekday`); 
+    break;
+  case working_day.includes(Day):
+    console.log(` ${Day} is Working Day`); 
+    break;
+  default:
+    console.log('Invalid Day, please try again.');
+    break;
+  }
+  rl.close();
+});
