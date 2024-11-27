@@ -85,3 +85,16 @@ const users = {
 //     console.log(`${user} is a Mern developer`);
 //   }
 // }
+
+// Set your name in the users object without modifying the original users object
+
+// const updatedUsers = Object.assign({},users,{
+// yab:{
+//   email: 'yab@yab.com',
+//   skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux'],
+//   age: 20,
+//   isLoggedIn: false,
+//   points: 40
+// }
+// });
+// console.log(updatedUsers);
