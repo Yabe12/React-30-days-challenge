@@ -66,14 +66,22 @@ const users = {
 // }
 // console.log(`The user with the most skills is ${x}, with ${y} skills.`);
 
+// Count logged in users,count users having greater than equal to 50 points from the following object.
+
+// for (const user in users){
+//   if(users[user].points >= 50 && users[user].isLoggedIn==true){
+//     console.log(`${user} is a logged in user and has 50 or more points.`);
+//   }
+
+// }
 
 
 
 // Find people who are MERN stack developer from the users object
-for (const user in users){
-  const skills = users[user].skills;
-  const Mern=['MongoDB', 'Express', 'React', 'Node'];
-  if (Mern.every(skill => skills.includes(skill))){
-    console.log(`${user} is a Mern developer`);
-  }
-}
+// for (const user in users){
+//   const skills = users[user].skills;
+//   const Mern=['MongoDB', 'Express', 'React', 'Node'];
+//   if (Mern.every(skill => skills.includes(skill))){
+//     console.log(`${user} is a Mern developer`);
+//   }
+// }
