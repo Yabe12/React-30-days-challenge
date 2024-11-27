@@ -98,3 +98,12 @@ const users = {
 // }
 // });
 // console.log(updatedUsers);
+
+
+// Get all keys or properties of users object
+const keys = Object.keys(users);
+console.log(keys);
+// Get all the values of users object
+
+const values = Object.values(users);
+console.log(values);
