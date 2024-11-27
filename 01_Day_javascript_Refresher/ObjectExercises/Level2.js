@@ -50,14 +50,30 @@ const users = {
   }
 
 };
-let x =null;
-let y =0;
-for (const user in users) {
-  const skills = users[user]. skills.length;
-  if (skills >y) {
-    x = user;
-    y = skills;
 
+// Find the person who has many skills in the users object.
+
+
+// let x =null;
+// let y =0;
+// for (const user in users) {
+//   const skills = users[user]. skills.length;
+//   if (skills >y) {
+//     x = user;
+//     y = skills;
+
+//   }
+// }
+// console.log(`The user with the most skills is ${x}, with ${y} skills.`);
+
+
+
+
+// Find people who are MERN stack developer from the users object
+for (const user in users){
+  const skills = users[user].skills;
+  const Mern=['MongoDB', 'Express', 'React', 'Node'];
+  if (Mern.every(skill => skills.includes(skill))){
+    console.log(`${user} is a Mern developer`);
   }
 }
-console.log(`The user with the most skills is ${x}, with ${y} skills.`);
