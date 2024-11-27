@@ -101,9 +101,21 @@ const users = {
 
 
 // Get all keys or properties of users object
-const keys = Object.keys(users);
-console.log(keys);
+// const keys = Object.keys(users);
+// console.log(keys);
 // Get all the values of users object
 
-const values = Object.values(users);
-console.log(values);
+// const values = Object.values(users);
+// console.log(values);
+
+// Use the countries object to print a country name, capital, populations and languages.
+
+const countries ={
+  country:{
+    name: 'Ethiopia',
+    capital: 'Addis Ababa',
+    population: 11490000,
+    languages: ['Amhara', 'Tigrigna', 'Gambo']
+  }
+}
+console.log(Object.keys(countries.country));
