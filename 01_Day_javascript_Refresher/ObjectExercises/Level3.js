@@ -105,6 +105,7 @@ const products = [
     likes: ['fg12cy'],
   },
 ]
+// Create a function called signUp which allows user to add to the collection. If user exists, inform the user that he has already an account.
 
 // function signup(users,name,password,email) {
 //   const newUser = {
@@ -145,28 +146,75 @@ const products = [
 //   });
 // });
 
-const readline = require('readline');
+// Create a function called signIn which allows user to sign in to the application
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+// const readline = require('readline');
 
-rl.question('Enter your name: ', (username) => {
-  rl.question('Enter your email: ', (email) => {
+// const rl = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout,
+// });
+
+// rl.question('Enter your name: ', (username) => {
+//   rl.question('Enter your email: ', (email) => {
   
-function signin(users) {
-  const userFound = users.find(
-    (user) => user.username === username && user.email === email
-  );
-  if (userFound){
-    console.log("you can inter");
-  }else{
-    console.log('User not found. Please signup first.');
-  }
+// function signin(users) {
+//   const userFound = users.find(
+//     (user) => user.username === username && user.email === email
+//   );
+//   if (userFound){
+//     console.log("you can inter");
+//   }else{
+//     console.log('User not found. Please signup first.');
+//   }
 
-}
-signin(users);
-rl.close();
-  });
-  });
+// }
+// signin(users);
+// rl.close();
+//   });
+//   });
+
+const newuser = {
+  _id: "eedfcf",
+  username: "John Doe",
+  email: "johndoe@johndoe.com",
+  password: "123456",
+  createdAt: "08/01/2020 10:15 AM",
+  isLoggedIn: false,
+};
+// const signup = (users,newuser) => {
+//   const userFound = users.find(
+//         (user) => user.username === newuser.username && newuser.email === email);
+//         if (userFound) {
+//           console.log('User is found:', userFound);
+//         }else{
+//           console.log('User not found. Signing up...');
+//           users.push(newuser);
+//           console.log('New user signed up:', newuser);
+//         }
+// };
+// signup (users,newuser);
+const signup = (users,newuser) => {
+  const userFound = users.find(
+        (user) => user.id === newuser.id );
+        if (userFound) {
+          console.log('User is found:', userFound);
+        }else{
+          console.log('User not found. Signing up...');
+          users.push(newuser);
+          console.log('New user signed up:', newuser);
+        }
+};
+signup (users,newuser);
+
+// const signIn = (newuser) => {
+//   const exists = users.find((user) => user._id === newuser._id);
+//   if (exists) {
+//     exists.isLoggedIn = true;
+//     console.log("user signIn success");
+//   } else {
+//     exists.isLoggedIn = false;
+//     console.log("account does not exist");
+//   }
+// };
+// signIn(newuser);
