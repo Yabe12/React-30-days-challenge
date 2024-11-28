@@ -243,29 +243,43 @@ const newuser = {
 // }
 // rateProduct("aegfal", "eefamr", 2);
 
-// fisum rate prodcuts
 
-const rateProduct = (productId, userId, rate) => {
-    const product = products.find((product) => product._id === productId );
-    if (product) {
-      const user = users.find((users) => users._id === userId);
-      if (user) {
-        const existingRating = product.ratings.find(
-          (rating) => rating.userId === userId
-        );
-        if(!existingRating){
-        product.ratings.push({ userId: users._id, rate });
-        console.log("Product rating updated successfully");}
-        else{
-          console.log("User has already rated this product");
-        }
-      }
-      else{
-        console.log("User not found");
-      }
-    }
-    else{
-      console.log("Product not found");
-    }
+
+// const rateProduct = (productId, userId, rate) => {
+//   const product = products.find((product) => product._id === productId );
+//   if (product) {
+//     const user = users.find((users) => users._id === userId);
+//     if (user) {
+//       const existingRating = product.ratings.find(
+//         (rating) => rating.userId === userId
+//       );
+//       if(!existingRating){
+//       product.ratings.push({ userId: users._id, rate });
+//       console.log("Product rating updated successfully");}
+//       else{
+//         console.log("User has already rated this product");
+//       }
+//     }
+//     else{
+//       console.log("User not found");
+//     }
+//   }
+//   else{
+//     console.log("Product not found");
+//   }
+// }
+// rateProduct("eedfcf", "fg12cy", 2);
+
+// name of the product when user insert id and find that his product
+const ratedProduct =(userId)=>{
+  const product = products.find((product) => product.ratings.some(
+    (rating) => rating.userId === userId
+  ));
+  if (product) {
+    console.log("Products rated by user:", product.name);
+  } else {
+    console.log("No products rated by user");
   }
-  rateProduct("eedfcf", "fg12cy", 2);
+}
+
+ratedProduct("fg12cy");
