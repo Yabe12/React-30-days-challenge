@@ -105,3 +105,41 @@ const products = [
     likes: ['fg12cy'],
   },
 ]
+function signup(users,name,password,email) {
+  const newUser = {
+    _id: 'user' + (users.length + 1),
+    username: {name},
+    email: {email},
+    password: {password},
+    createdAt: new Date().toISOString().split('T')[0],
+    isLoggedIn: false,
+  };
+  users.push(newUser);
+  console.log('New user signed up:', newUser);
+}
+
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+rl.question('Enter your name: ', (name) => {
+  rl.question('Enter your email: ', (email) => {
+    rl.question('Enter your password: ', (password) => {
+    const userFound = users.find(
+      (user) => user.username === name && user.email === email
+    );
+
+    if (userFound) {
+      console.log('User is found:', userFound);
+    } else {
+      console.log('User not found. Signing up...');
+      signup(users, name, email,password);
+    }
+
+    rl.close();
+  });
+  });
+});
