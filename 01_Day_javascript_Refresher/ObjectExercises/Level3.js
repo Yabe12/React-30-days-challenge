@@ -194,18 +194,18 @@ const newuser = {
 //         }
 // };
 // signup (users,newuser);
-const signup = (users,newuser) => {
-  const userFound = users.find(
-        (user) => user.id === newuser.id );
-        if (userFound) {
-          console.log('User is found:', userFound);
-        }else{
-          console.log('User not found. Signing up...');
-          users.push(newuser);
-          console.log('New user signed up:', newuser);
-        }
-};
-signup (users,newuser);
+// const signup = (users,newuser) => {
+//   const userFound = users.find(
+//         (user) => user.id === newuser.id );
+//         if (userFound) {
+//           console.log('User is found:', userFound);
+//         }else{
+//           console.log('User not found. Signing up...');
+//           users.push(newuser);
+//           console.log('New user signed up:', newuser);
+//         }
+// };
+// signup (users,newuser);
 
 // const signIn = (newuser) => {
 //   const exists = users.find((user) => user._id === newuser._id);
@@ -218,3 +218,29 @@ signup (users,newuser);
 //   }
 // };
 // signIn(newuser);
+// The products array has three elements and each of them has six properties.
+// a. Create a function called rateProduct which rates the product
+// b. Create a function called averageRating which calculate the average rating of a product
+const rateProduct = (productId, userId, rate) => {
+  const product = products.find((product) => product._id === productId );
+  if (product) {
+    const user = users.find((users) => users._id === userId);
+    if (user) {
+      const existingRating = product.ratings.find(
+        (rating) => rating.userId === userId
+      );
+      if(!existingRating)
+      product.ratings.push({ userId: users._id, rate });
+      console.log("Product rating updated successfully");
+    }
+    else{
+      console.log("User not found");
+    }
+  }
+  else{
+    console.log("Product not found");
+  }
+}
+rateProduct("aegfal", "eefamr", 2);
+
+// fisum rate prodcuts
