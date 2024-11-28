@@ -271,15 +271,29 @@ const newuser = {
 // rateProduct("eedfcf", "fg12cy", 2);
 
 // name of the product when user insert id and find that his product
-const ratedProduct =(userId)=>{
-  const product = products.find((product) => product.ratings.some(
-    (rating) => rating.userId === userId
-  ));
+// const ratedProduct =(userId)=>{
+//   const product = products.find((product) => product.ratings.some(
+//     (rating) => rating.userId === userId
+//   ));
+//   if (product) {
+//     console.log("Products rated by user:", product.name);
+//   } else {
+//     console.log("No products rated by user");
+//   }
+// }
+
+// ratedProduct("fg12cy");
+
+// Create a function called averageRating which calculate the average rating of a product
+
+const averageRating = (productId) => {
+  const product = products.find((product) => product._id === productId);
   if (product) {
-    console.log("Products rated by user:", product.name);
+    const sumOfRates = product.ratings.reduce((acc, rating) => acc + rating.rate, 0);
+    const averageRate = sumOfRates / product.ratings.length;
+    console.log("Average rating of product:", averageRate);
   } else {
-    console.log("No products rated by user");
+    console.log("Product not found");
   }
 }
-
-ratedProduct("fg12cy");
+averageRating("eedfcf");
