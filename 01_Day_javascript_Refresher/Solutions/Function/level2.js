@@ -140,3 +140,48 @@ const removeItem = (index) => {
 const index = 0;
 console.log(removeItem(index)); 
 
+// Declare a function name evensAndOdds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+ const evensAndOdds = (num) => {
+  let evens = 0;
+  let odds = 0;
+
+  while (num > 0) {
+    if (num % 2 === 0) {
+      evens++;
+    } else {
+      odds++;
+    }
+    num = Math.floor(num / 10);
+  }
+
+  return { evens, odds };
+};
+const num = 100;
+
+console.log(evensAndOdds(num));
+
+// Write a function which takes any number of arguments and return the sum of the arguments
+const sum = (arguments)=>{
+  let sum=0;
+  for(let i=0; i<arguments.length; i++){
+    sum+=arguments[i];
+  }
+  return sum;
+};
+arguments=[1,2,3,4,5];
+console.log(sum(arguments));
+
+
+// Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
+// console.log(userIdG
+
+const userIdGenerator = () => {
+  let id = '';
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  for (let i = 0; i < 7; i++) {
+    id += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return id;
+};
+
+console.log(userIdGenerator());
