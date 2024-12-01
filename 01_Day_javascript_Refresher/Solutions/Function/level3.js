@@ -98,27 +98,58 @@
 // Overweight: BMI is 25 to 29.9
 // Obese: BMI is 30 or more
 
+// const readline = require('readline');
+// const rl = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout
+// });
+
+// rl.question('Enter your weight: ', (weight) => {
+//   rl.question('Enter your height: ', (height) => {
+//     const BMI = (weight, height) => {
+//       return weight * Math.pow(height, 2);
+//     };
+//     console.log('your BMI is:', BMI(weight, height));
+//     rl.close();
+//     if (BMI<18.5){
+//       console.log('Underweight');
+//     }else if (BMI>18.5 && BMI<24.9){
+//       console.log('Normal weight');
+//     }else if (BMI>25 && BMI<29.9){
+//       console.log('Overweight');
+//     }else{
+//       console.log('Obese');
+//     }
+//   });
+// });
+// Write a function called checkSeason, it takes a month parameter and returns the season:Autumn, Winter, Spring or Summer.
+
 const readline = require('readline');
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
 
-rl.question('Enter your weight: ', (weight) => {
-  rl.question('Enter your height: ', (height) => {
-    const BMI = (weight, height) => {
-      return weight * Math.pow(height, 2);
-    };
-    console.log('your BMI is:', BMI(weight, height));
+rl.question('Enter the month: ', (Month) => {
+  const Autumn = ["September", "October" ,"November"];
+const Winter = ["January","February","March","April","May","June","July"];
+const Summer = ["March", "April" ,"May"];
+const spring = ["June", "July", "August"];
+  
+   const checkSeason =( )=>{
+     if (Autumn.includes(Month)){
+       return 'Autumn';
+     } else if (Winter.includes(Month)){
+       return 'Winter';
+     } else if (Summer.includes(Month)){
+       return 'Summer';
+     } else if (spring.includes(Month)){
+       return 'Spring';
+     } else {
+       return 'Invalid Month';
+     }
+   }
+    console.log('the season is :',checkSeason(Month) );
     rl.close();
-    if (BMI<18.5){
-      console.log('Underweight');
-    }else if (BMI>18.5 && BMI<24.9){
-      console.log('Normal weight');
-    }else if (BMI>25 && BMI<29.9){
-      console.log('Overweight');
-    }else{
-      console.log('Obese');
-    }
   });
-});
+
