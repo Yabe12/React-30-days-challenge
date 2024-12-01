@@ -55,21 +55,38 @@
 // });
 
 // Area of a circle is calculated as follows: area = π x r x r. Write a function which calculates _areaOfCircle
+// const readline = require('readline');
+// const rl = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout
+// });
+
+// rl.question('Enter your first number: ', (firstNumber) => {const num = parseFloat(firstNumber);
+    
+
+   
+//     const _areaOfCircle = () => {
+//       return Math.PI * Math.pow(num, 2);
+//     }
+
+//     console.log('Area of a circle:', _areaOfCircle(num));
+//     rl.close();
+//   });
+
+// Temperature in oC can be converted to oF using this formula: oF = (oC x 9/5) + 32. Write a function which convert oC to oF convertCelciusToFahrenheit
+
 const readline = require('readline');
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout
 });
 
-rl.question('Enter your first number: ', (firstNumber) => {const num = parseFloat(firstNumber);
-    
-
-   
-    const _areaOfCircle = () => {
-      return Math.PI * Math.pow(num, 2);
-    }
-
-    console.log('Area of a circle:', _areaOfCircle(num));
+rl.question('Enter your temperature: ', (temperature) => {
+  const num1 = parseFloat(temperature);
+   const ConvertTemperature =( )=>{
+     return (temperature * 9/5) + 32;
+   }
+    console.log('The sum of the two numbers is:',ConvertTemperature(num1) );
     rl.close();
   });
 
