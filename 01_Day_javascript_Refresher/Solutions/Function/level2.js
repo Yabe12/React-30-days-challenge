@@ -121,11 +121,22 @@
 
 
 // Declare a function name addItem. It takes an item parameter and it returns an array after adding the item
-const addItem = (item) =>{
-  let newArray = [1,2,3];
-  newArray.push(item);
-  return newArray;
-}
-const item =["a","b","c"];
+// const addItem = (item) =>{
+//   let newArray = [1,2,3];
+//   newArray.push(item);
+//   return newArray;
+// }
+// const item =["a","b","c"];
 
-console.log (addItem(item));
+// console.log (addItem(item));
+
+// Declare a function name removeItem. It takes an index parameter and it returns an array after removing an ite
+const removeItem = (index) => {
+  let Array = [1, 2, 3];
+  Array.splice(index, 1);
+  return Array;
+};
+
+const index = 0;
+console.log(removeItem(index)); 
+
