@@ -53,10 +53,34 @@
 
 // Declare a function name printArray. It takes array as a parameter and it prints out each value of the array.
 
-const printArray=(arr) => {
-  for(let i=0; i<arr.length; i++){
-    console.log(arr[i]);
-  }
-}
-arr = [1,2,3,4];
-printArray(arr);
+// const printArray=(arr) => {
+//   for(let i=0; i<arr.length; i++){
+//     console.log(arr[i]);
+//   }
+// }
+// arr = [1,2,3,4];
+// printArray(arr);
+
+
+// Write a function name showDateTime which shows time in this format: 08/01/2020 04:08 using the Date object.
+
+// showDateTime()
+// 08/01/2020 04:08
+const showDateTime = (year, month, day , hour , minute , second) => {
+ 
+  console.log(`The date is ${month + 1} - ${day} - ${year}   ${hour} : ${minute} `);
+};
+
+const date = new Date(); 
+const year = date.getFullYear();
+const month = date.getMonth(); 
+const day = date.getDate();
+
+const hour = date.getHours();
+
+const minute = date.getMinutes();
+
+const second = date.getSeconds();
+
+showDateTime(year, month, day , hour, minute, second);  
+
