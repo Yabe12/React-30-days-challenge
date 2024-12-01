@@ -286,14 +286,38 @@ const newuser = {
 
 // Create a function called averageRating which calculate the average rating of a product
 
-const averageRating = (productId) => {
-  const product = products.find((product) => product._id === productId);
-  if (product) {
-    const sumOfRates = product.ratings.reduce((acc, rating) => acc + rating.rate, 0);
-    const averageRate = sumOfRates / product.ratings.length;
-    console.log("Average rating of product:", averageRate);
-  } else {
-    console.log("Product not found");
+// const averageRating = (productId) => {
+//   const product = products.find((product) => product._id === productId);
+//   if (product) {
+//     const sumOfRates = product.ratings.reduce((acc, rating) => acc + rating.rate, 0);
+//     const averageRate = sumOfRates / product.ratings.length;
+//     console.log("Average rating of product:", averageRate);
+//   } else {
+//     console.log("Product not found");
+//   }
+// }
+// averageRating("eedfcf");
+
+// Create a function called likeProduct. This function will helps to like to the product if it is not liked and remove like if it was liked.
+
+  const likeProduct = (productId, userId) => {
+    const product = products.find((product) => product._id === productId);
+    if (product) {
+      const user = users.find((users) => users._id === userId);
+      if (user) {
+        const existingLike = product.likes.find(
+          (like) => like.userId === userId
+        );
+        if(!existingLike)
+        product.likes.push({ userId: users._id });
+        console.log("Product liked successfully");
+      }
+      else{
+        console.log("User not found");
+      }
+    }
+    else{
+      console.log("Product not found");
+    }
   }
-}
-averageRating("eedfcf");
+  likeProduct("eedfcf", "fg12cy");
