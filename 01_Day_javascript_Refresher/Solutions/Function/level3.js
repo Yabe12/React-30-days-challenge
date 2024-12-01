@@ -18,21 +18,23 @@
 // });
 
 // Declare a function addNumbers and it takes two two parameters and it returns sum.
-const readline = require('readline');
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
 
-rl.question('Enter your first number: ', (firstNumber) => {
-  rl.question('Enter your second number: ', (SecondNumber) => {
- const firstNu = parseFloat(firstNumber)
- const secondN = parseFloat(SecondNumber)
- const sum = secondN +firstNu
-    console.log('sum is :', sum);
-    rl.close();
-  });
-});
+
+// const readline = require('readline');
+// const rl = readline.createInterface({
+//   input: process.stdin,
+//   output: process.stdout
+// });
+
+// rl.question('Enter your first number: ', (firstNumber) => {
+//   rl.question('Enter your second number: ', (SecondNumber) => {
+//  const firstNu = parseFloat(firstNumber)
+//  const secondN = parseFloat(SecondNumber)
+//  const sum = secondN +firstNu
+//     console.log('sum is :', sum);
+//     rl.close();
+//   });
+// });
 
 
 // const readline = require('readline');
@@ -51,3 +53,23 @@ rl.question('Enter your first number: ', (firstNumber) => {
 //     rl.close();
 //   });
 // });
+
+// Area of a circle is calculated as follows: area = π x r x r. Write a function which calculates _areaOfCircle
+const readline = require('readline');
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.question('Enter your first number: ', (firstNumber) => {const num = parseFloat(firstNumber);
+    
+
+   
+    const _areaOfCircle = () => {
+      return Math.PI * Math.pow(num, 2);
+    }
+
+    console.log('Area of a circle:', _areaOfCircle(num));
+    rl.close();
+  });
+
