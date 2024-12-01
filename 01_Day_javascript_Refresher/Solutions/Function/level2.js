@@ -118,3 +118,14 @@
 // }
 // const arr=["a","b","c"];
 // console.log (capitalizeArray(arr))
+
+
+// Declare a function name addItem. It takes an item parameter and it returns an array after adding the item
+const addItem = (item) =>{
+  let newArray = [1,2,3];
+  newArray.push(item);
+  return newArray;
+}
+const item =["a","b","c"];
+
+console.log (addItem(item));
