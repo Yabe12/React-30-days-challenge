@@ -38,15 +38,25 @@
 // });
 // });
 
-const solveQuadratic = (A, B, C) => {
-  const discriminant = Math.pow(B, 2) - 4 * A * C;
-  if (discriminant < 0) {
-    return "No real roots";
-  } else {
-    const root1 = (-B + Math.sqrt(discriminant)) / (2 * A);
-    const root2 = (-B - Math.sqrt(discriminant)) / (2 * A);
-    return [root1, root2];
-  }
-};
+// const solveQuadratic = (A, B, C) => {
+//   const discriminant = Math.pow(B, 2) - 4 * A * C;
+//   if (discriminant < 0) {
+//     return "No real roots";
+//   } else {
+//     const root1 = (-B + Math.sqrt(discriminant)) / (2 * A);
+//     const root2 = (-B - Math.sqrt(discriminant)) / (2 * A);
+//     return [root1, root2];
+//   }
+// };
 
-console.log(solveQuadratic(1, 4, 4));
+// console.log(solveQuadratic(1, 4, 4));
+
+// Declare a function name printArray. It takes array as a parameter and it prints out each value of the array.
+
+const printArray=(arr) => {
+  for(let i=0; i<arr.length; i++){
+    console.log(arr[i]);
+  }
+}
+arr = [1,2,3,4];
+printArray(arr);
