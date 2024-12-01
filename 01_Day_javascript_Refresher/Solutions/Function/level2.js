@@ -66,21 +66,43 @@
 
 // showDateTime()
 // 08/01/2020 04:08
-const showDateTime = (year, month, day , hour , minute , second) => {
+// const showDateTime = (year, month, day , hour , minute , second) => {
  
-  console.log(`The date is ${month + 1} - ${day} - ${year}   ${hour} : ${minute} `);
-};
+//   console.log(`The date is ${month + 1} - ${day} - ${year}   ${hour} : ${minute} `);
+// };
 
-const date = new Date(); 
-const year = date.getFullYear();
-const month = date.getMonth(); 
-const day = date.getDate();
+// const date = new Date(); 
+// const year = date.getFullYear();
+// const month = date.getMonth(); 
+// const day = date.getDate();
 
-const hour = date.getHours();
+// const hour = date.getHours();
 
-const minute = date.getMinutes();
+// const minute = date.getMinutes();
 
-const second = date.getSeconds();
+// const second = date.getSeconds();
 
-showDateTime(year, month, day , hour, minute, second);  
+// showDateTime(year, month, day , hour, minute, second);  
 
+// Declare a function name swapValues. This function swaps value of x to y.
+
+// const swapValues =(x,y)=>{
+// let temp=x;
+//  x=y;
+//  y=temp;
+
+// console.log('After swapping:',x,y);
+// };
+// swapValues(3,5);
+
+// Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the array (don't use method).
+const reverseArray =()=>{
+  let reverseArray=[];
+  for(let i=arr.length-1; i>=0; i--){
+    reverseArray.push(arr[i]);
+  }
+  return reverseArray;
+}
+const arr=[1,2,3,5];
+
+console.log (reverseArray(arr));
