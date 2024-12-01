@@ -96,13 +96,25 @@
 // swapValues(3,5);
 
 // Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the array (don't use method).
-const reverseArray =()=>{
-  let reverseArray=[];
-  for(let i=arr.length-1; i>=0; i--){
-    reverseArray.push(arr[i]);
-  }
-  return reverseArray;
-}
-const arr=[1,2,3,5];
+// const reverseArray =()=>{
+//   let reverseArray=[];
+//   for(let i=arr.length-1; i>=0; i--){
+//     reverseArray.push(arr[i]);
+//   }
+//   return reverseArray;
+// }
+// const arr=[1,2,3,5];
 
-console.log (reverseArray(arr));
+// console.log (reverseArray(arr));
+
+// Declare a function name capitalizeArray. It takes array as a parameter and it returns the - capitalizedarray.
+// const capitalizeArray =(arr)=>{
+//   let capitalized=[];
+//   for (let i=0; i<arr.length; i++){
+//     capitalized.push(arr[i].charAt(0).toUpperCase());
+
+//   }
+//   return capitalized ;
+// }
+// const arr=["a","b","c"];
+// console.log (capitalizeArray(arr))
