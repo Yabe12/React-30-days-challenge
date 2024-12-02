@@ -49,6 +49,28 @@ function generateColors(type, count) {
 console.log(generateColors('hex', 5)); 
 console.log(generateColors('rgb', 3));
 
+
+function generateColors(num) {
+  let colors = [];
+  for (let i = 0; i < num; i++) {
+    let colorType = Math.random() < 0.5 ? 'hex' : 'rgb';
+    if (colorType === 'hex') {
+      let hex = '#';
+      for (let j = 0; j < 6; j++) {
+        hex += Math.floor(Math.random() * 16).toString(16);
+      }
+      colors.push(hex);
+    } else {
+      let r = Math.floor(Math.random() * 256);
+      let g = Math.floor(Math.random() * 256);
+      let b = Math.floor(Math.random() * 256);
+      colors.push(`rgb(${r}, ${g}, ${b})`);
+    }
+  }
+  return colors;
+}
+
+
 // const generateColors = (type, count) => {
 //   let colors = [];
 //   for (let i = 0; i < count; i++) {
