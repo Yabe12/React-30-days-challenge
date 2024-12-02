@@ -86,13 +86,41 @@ function generateColors(num) {
 
 
 // Call your function shuffleArray, it takes an array as a parameter and it returns a shuffled array
-// // *****************************************************
-// const shuffleArray =(arr) => {
-// let shuffledArray =[];
 
-// }
-// const arr=[1,92,87];
-// console.log(shuffleArray(arr));
+// const shuffleArray =(arr) => {
+//   let shuffleArray =[];
+  
+//   for(let  i=0  ;i<arr.length; i++){ 
+//     shuffleArray.push(Math.random()*arr.length)
+//   }
+//   return shuffleArray;
+//   }
+//   const arr=[1,3,2];
+//   console.log(shuffleArray(arr));
+
+  const shuffleArray = (arr) => {
+    let shuffledArray = [];
+    let copy = [...arr]; 
+    while (copy.length > 0) {
+   let randomIndex = Math.floor(Math.random() * copy.length);
+    shuffledArray.push(copy.splice(randomIndex, 1)[0]);
+    }
+    return shuffledArray;
+  };
+  
+  const arr = [1, 92, 87];
+  console.log(shuffleArray(arr));
+  // const shuffleArray = (arr) => {
+  //   let shuffled = [];
+  //   while (arr.length > 0) {
+  //     let randomIndex = Math.floor(Math.random() * arr.length);
+  //     shuffled.push(arr[randomIndex]);
+  //     arr.splice(randomIndex, 1);
+  //   }
+  //   return shuffled;
+  // };
+  // const arr=[1,3,2];
+  // console.log(shuffleArray(arr));
 
 // Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
 const factorial=()=>{
