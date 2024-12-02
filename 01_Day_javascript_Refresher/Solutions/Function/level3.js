@@ -20,10 +20,49 @@
 //     rl.close();
 //   });
 // });
-//******************************************************
-// Write a function generateColors which can generate any number of hexa or rgb colors.
-//*****************************************************?//
-// ****
+
+// Write a function generateColors which can generate any number of hexa or rgb colors
+function generateColors(type, count) {
+  const colors = []; 
+  
+  if (type === 'hex') {
+    for (let i = 0; i < count; i++) {
+      const color = `#${Math.floor(Math.random() * 0xffffff).toString(16).padStart(6, '0')}`;
+      colors.push(color);
+    }
+  } else if (type === 'rgb') {
+ 
+    for (let i = 0; i < count; i++) {
+      const r = Math.floor(Math.random() * 256); // 
+      const g = Math.floor(Math.random() * 256); // 
+      const b = Math.floor(Math.random() * 256); // 
+      colors.push(`rgb(${r}, ${g}, ${b})`);
+    }
+  } else {
+    throw new Error("Invalid type. Use 'hex' or 'rgb'.");
+  }
+
+  return colors; 
+}
+
+
+console.log(generateColors('hex', 5)); 
+console.log(generateColors('rgb', 3));
+
+// const generateColors = (type, count) => {
+//   let colors = [];
+//   for (let i = 0; i < count; i++) {
+//     if (type === 'hexa') {
+//       colors.push('#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0'));
+//     } else if (type === 'rgb') {
+//       colors.push(rgb(${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)}));
+//     }
+//   }
+//   return colors;
+// };
+
+
+
 // Call your function shuffleArray, it takes an array as a parameter and it returns a shuffled array
 // // *****************************************************
 // const shuffleArray =(arr) => {
