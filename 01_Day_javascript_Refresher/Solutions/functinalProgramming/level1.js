@@ -75,3 +75,15 @@ const firstProduct = products.find((product) => {
   return product.price === ' ';
 });
 console.log(firstProduct);
+// Check if some products do not have a price value
+
+const hasNoPrice = products.some((product) => {
+  return product.price === ' ';
+});
+console.log(hasNoPrice);
+// Check if all the products have price value
+
+const allHavePrice = products.every((product) => {
+  return product.price && product.price !== ' ';
+});
+console.log(allHavePrice);
