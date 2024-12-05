@@ -22,3 +22,16 @@ class Animal {
 }
 const Animal1 = new Animal("dog","black",4,34);
 console.log(Animal1);
+class Dog extends Animal {
+  bark(){
+    console.log("Woof woof");
+  }
+  }
+  class cat extends Animal {
+    meow(){
+    console.log("Meow meow");
+  }}
+  const dog1 = new Dog("Buddy","brown",4,4);
+  const cat1 = new cat("wero","white",4,4);
+  console.log(dog1);
+  console.log(cat1);
