@@ -35,3 +35,15 @@ class Dog extends Animal {
   const cat1 = new cat("wero","white",4,4);
   console.log(dog1);
   console.log(cat1);
+  // Override the method you create in Animal class
+  class amimal extends Animal {
+    constructor(name, age , leg, type){
+      super(name, age, leg);
+      this._type = type;
+    }
+    get type(){
+      return this._type;
+    }
+  }
+  const animal2 = new amimal("lion",1000,4,"mammal");
+  console.log(animal2);
