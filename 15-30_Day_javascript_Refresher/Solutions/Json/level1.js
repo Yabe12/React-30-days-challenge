@@ -11,3 +11,12 @@ const student = {
 // Change skills array to JSON using JSON.stringify()
 const skill = JSON.stringify(student, ['skills']);
 console.log((skill));
+// Stringify the age variable
+const ages = JSON.stringify(student,['age']);
+console.log((ages));
+// Stringify the isMarried variable
+const married=JSON.stringify(student,['isMarried']);
+  console.log((married));
+  // Stringify the student object
+  const students = JSON.stringify(student);
+console.log((students));
