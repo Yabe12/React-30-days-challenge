@@ -95,4 +95,16 @@ const txt = `{
 }`
 // Parse the txt JSON to object.
 const students = JSON.parse(txt);
-console.log(students);
+// console.log(students);
+// Find the user who has many skills from the variable stored in txt.
+let skilled = null;
+let max=0;
+for (let user in students) {
+  if (students[user].skills.length > max) {
+    max = students[user].skills.length;
+    skilled = user
+  }
+}
+
+
+console.log("User with most skills:", skilled);
