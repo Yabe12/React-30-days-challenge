@@ -13,7 +13,7 @@ function Student() {
 
 
 function storeStudent() {
-  const student = new Student(); // Create an instance of Student
-  localStorage.setItem('student', JSON.stringify(student)); // Store it in localStorage
+  const student = new Student(); 
+  localStorage.setItem('student', JSON.stringify(student)); 
   console.log('Student object stored in localStorage');
 }
